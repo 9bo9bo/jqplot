@@ -689,9 +689,9 @@
                 // max will be equal or greater to fit even # of ticks.
                 if (this.daTickInterval != null) {
                     var nc = new $.jsDate(this.max).diff(this.min, this.daTickInterval[1], true);
-                    this.numberTicks = Math.ceil(nc/this.daTickInterval[0]) +1;
+                    this.numberTicks = Math.ceil(nc/this.daTickInterval[0]) + (nc % this.daTickInterval[0] === 0 ? 1 : 0);
                     // this.max = new $.jsDate(this.min).add(this.numberTicks-1, this.daTickInterval[1]).getTime();
-                    this.max = new $.jsDate(this.min).add((this.numberTicks-1) * this.daTickInterval[0], this.daTickInterval[1]).getTime();
+                    //this.max = new $.jsDate(this.min).add((this.numberTicks-1) * this.daTickInterval[0], this.daTickInterval[1]).getTime();
                 }
                 else if (dim > 200) {
                     this.numberTicks = parseInt(3+(dim-200)/100, 10);

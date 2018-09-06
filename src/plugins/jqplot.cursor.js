@@ -564,7 +564,7 @@
                         if (addbr) {
                             s += '<br />';
                         }
-                        s += $.jqplot.sprintf(c.tooltipFormatString, label, sx, sy);
+                        s += $.jqplot.sprintf(c.tooltipFormatString, label, sx, sy, data[2]);
                         addbr = true;
                     }
                 }
