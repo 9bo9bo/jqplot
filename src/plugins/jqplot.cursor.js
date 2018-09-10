@@ -671,6 +671,9 @@
             case 'se':
                 var x = gridpos.x + plot._gridPadding.left + c.tooltipOffset;
                 var y = gridpos.y + plot._gridPadding.top + c.tooltipOffset;
+                if (x + elem.outerWidth(true) > plot.grid._width) {
+                    x = gridpos.x + plot._gridPadding.left - elem.outerWidth(true) - c.tooltipOffset;
+                }
                 break;
             case 's':
                 var x = gridpos.x + plot._gridPadding.left - elem.outerWidth(true)/2;
