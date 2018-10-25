@@ -352,7 +352,7 @@
             }
 
             // Doing complete autoscaling
-            if (this.min == null || this.max == null && this.tickInterval == null && !this.autoscale) {
+            if (this.min == null && this.max == null && this.tickInterval == null) {
                 // Check if user must have tick at 0 or 100 and ensure they are in range.
                 // The autoscaling algorithm will always place ticks at 0 and 100 if they are in range.
                 if (this.forceTickAt0) {
